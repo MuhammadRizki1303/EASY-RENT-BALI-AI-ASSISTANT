@@ -1,0 +1,49 @@
+{
+  "name": "easy-rent-bali-ai",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/mobile",
+    "backend",
+    "mcp-servers/inventory-server",
+    "mcp-servers/booking-server",
+    "shared/types"
+  ],
+  "scripts": {
+    "mobile:start": "npm run start --workspace apps/mobile",
+    "mobile:android": "npm run android --workspace apps/mobile",
+    "mobile:web": "npm run web --workspace apps/mobile",
+    "backend:build": "npm run build --workspace inventory-server && npm run build --workspace booking-server && npm run build --workspace backend",
+    "backend:dev": "npm run dev --workspace backend",
+    "backend:start": "npm run start --workspace backend",
+    "inventory:dev": "npm run dev --workspace inventory-server",
+    "booking:dev": "npm run dev --workspace booking-server",
+    "db:init": "npm run db:init --workspace backend",
+    "db:migrate": "npm run db:migrate --workspace backend",
+    "db:seed": "npm run db:seed --workspace backend",
+    "db:test": "npm run db:test --workspace backend",
+    "llm:test": "npm run llm:test --workspace backend",
+    "mcp-a:test": "npm run test --workspace inventory-server",
+    "mcp-b:test": "npm run test --workspace booking-server",
+    "mcp:test": "npm run mcp:test --workspace backend",
+    "api:test": "npm run api:test --workspace backend",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint apps/mobile backend mcp-servers shared/types --ext .ts,.tsx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "~19.3.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.4",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.48.1"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Easy Rent Bali AI Assistant",
+    "slug": "easy-rent-bali-ai",
+    "version": "1.0.0",
+    "scheme": "easyrentbali",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.easyrentbali.assistant",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.easyrentbali.assistant",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
